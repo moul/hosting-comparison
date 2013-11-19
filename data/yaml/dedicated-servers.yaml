@@ -1,0 +1,49 @@
+%YAML 1.2
+---
+
+templates:
+  - online_net_std
+    cpu:
+      bits: 64
+      count: 1
+      vt: y
+     vendor: intel
+    memory:
+      type: ddr3
+      ecc: y
+    features:
+      kvm: y
+      ddos_protection: y
+    network:
+      ipv4_addresses: 1
+      ipv6_bloc: 48
+      trafic_unlimited: y
+      connectivity_mbps: 1000
+      guaranteed_connectivity_mbps: 400
+
+
+online_net:
+  -
+    template: online_net_std
+    name: dedibox-st12
+    title: Dedibox ST-12 SATA
+    chassis:
+      vendor: HP
+      model: DL120 Gen7
+    price:
+      eur_ht: 89.99
+    disk:
+      type: SATA
+      raid: y
+      raid_hardware: y
+      raid_types: 0/1/5
+      hotswappable: y
+      text: 3 x 4To SATA3
+    cpu:
+      model: Xeon E3 1220
+      cores: 4
+      threads: 4
+      frequency_ghz: 3.4
+      l3_cache_mbytes: 8
+    memory:
+      gbytes: 8
